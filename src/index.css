@@ -9,6 +9,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+ul::-webkit-scrollbar {
+  width: 20px;               /* width of the entire scrollbar */
+}
+
+ul::-webkit-scrollbar-track {
+  background: rgb(214, 210, 206);        /* color of the tracking area */
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: rgb(28, 92, 243);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(19, 152, 126);  /* creates padding around scroll thumb */
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -56,7 +69,7 @@ button[type="submit"]{
 
 ul {
   height: 470px;
-  overflow: scroll;
+  overflow-y: scroll;
   width: 600px;
 }
 .list_section {
