@@ -28,9 +28,8 @@ getVisibleContacts = () => {
 const {contacts, filter} = this.state
 return contacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase()))
 } 
-
   render() {
-    const {filter} = this.state;
+   const {filter} = this.state;
    const visibleContacts = this.getVisibleContacts();
   return (
     <div
@@ -45,8 +44,10 @@ return contacts.filter((contact) => contact.name.toLowerCase().includes(filter.t
       }}>
 <ContactForm onAdd={this.handleAddContact} onCheckUnique={this.handleCheckUniqueContact}/>
 <h2>Contacts List</h2>
-<Filter filter={filter} onChange={this.handleFilterChange}/>
+<h5>Find contact</h5><Filter filter={filter} onChange={this.handleFilterChange}/>
+<div className="list_section">
 <ContactList contacts={visibleContacts} onRemove={this.handleRemoveContact}/>
+</div>
   </div>
   );
 }}

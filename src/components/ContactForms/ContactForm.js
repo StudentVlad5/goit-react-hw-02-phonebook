@@ -51,7 +51,7 @@ resetForm = () => this.setState(INISHIAL_STATE)
                 onChange = {this.handleChangeForm}
                 required/>
             </label>
-            <label>Number
+            <label>Phone
                 <input 
                 type="tel"
                 name="phone"
