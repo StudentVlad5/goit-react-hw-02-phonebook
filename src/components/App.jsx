@@ -4,6 +4,14 @@ import ContactForm from './ContactForms/ContactForm';
 import ContactList from './ContactList/ContactList';
 import initialContacts from './initialContacts.json'
 
+function dynamicSort(property) {
+  return function (a,b) {
+        const result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+        return result;
+  }
+}
+initialContacts.sort(dynamicSort("name"));
+
 export default class App extends Component {
 state = {
       contacts: initialContacts,
