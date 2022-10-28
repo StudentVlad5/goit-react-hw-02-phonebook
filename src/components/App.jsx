@@ -17,8 +17,7 @@ state = {
      }
 
 componentDidUpdate() {
-LocalStorage(this.state.contacts);
-console.log(JSON.parse(localStorage.getItem('initialContacts')))
+LocalStorage(this.state.contacts)
 }   
   
 handleAddContact = (newContact) => {
